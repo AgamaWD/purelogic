@@ -1,0 +1,31 @@
+.mobile-submenu
+    &__header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 22px 14px
+        border-bottom: 1px solid $c-border
+        transition: all 0.01s linear
+    &__text
+        +text($c-text, $fs-text, 500, 1)
+        transition: all 0.01s linear
+    &__list
+        display: none
+    &__icon
+        width: 7px
+        height: 12px
+        transform: rotate(-90deg)
+        stroke: $c-text
+        fill: $c-text
+        transition: all 0.01s linear
+
+.mobile-submenu:hover
+    background-color: $c-primary
+    transition: all 0.01s linear
+    .mobile-submenu__text
+        color: $c-white
+        transition: all 0.01s linear
+    .mobile-submenu__icon
+        stroke: $c-white
+        fill: $c-white
+        transition: all 0.01s linear

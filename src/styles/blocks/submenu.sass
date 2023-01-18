@@ -1,0 +1,62 @@
+.submenu
+    position: relative
+    &__header
+        display: flex
+        align-items: center
+        width: fit-content
+        cursor: pointer
+    &__text
+      +text($c-text, $fs-text, 400, 1.17)
+    &__icon
+        width: 11.28px
+        height: 6.85px
+        margin-left: 11.3px
+        fill: $c-text
+        transform: rotate(0deg)
+        transition: transform $transition-duration linear
+    &._active .submenu__icon
+        transform: rotate(180deg)
+        transition: transform $transition-duration linear
+    &__list
+        position: absolute
+        left: 0
+        top: calc(100% + 10px)
+        width: max-content
+        padding-top: 0
+        padding-bottom: 0
+        padding-left: 10px
+        padding-right: 10px
+        background-color: $c-white
+        overflow: hidden
+        visibility: hidden
+        height: 0
+        opacity: 0
+        z-index: -1
+        transition: all $transition-duration linear
+    &._active .submenu__list
+        visibility: visible
+        height: auto
+        opacity: 1
+        padding-top: 15px
+        padding-bottom: 15px
+        z-index: 9999
+        transition: all $transition-duration linear
+
+    &__item
+        +text($c-text, $fs-text, 400, 1.17)
+        padding: 0 4px 6px
+        cursor: pointer
+        &:not(:last-child)    
+            margin-bottom: 10px
+
+.submenu:hover
+    .submenu__text
+        color: $c-primary
+    .submenu__icon
+        fill: $c-primary
+
+@media screen and ( max-width: $screen-lg-max )
+    .submenu
+        &__icon 
+            margin-left: 4px
+         

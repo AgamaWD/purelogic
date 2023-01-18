@@ -1,0 +1,76 @@
+.mobile-menu
+    display: none
+    &__btn
+        display: none
+
+@media screen and ( max-width: $screen-xs-max )
+    .mobile-menu
+        display: block
+        position: fixed
+        top: 0
+        right: -100vw
+        width: 100vw
+        height: 100vh
+        background-color: $c-white
+        z-index: 200
+        transition: all $transition-duration * 1.5 ease-out
+        ._active
+            right: 0
+            transition: all $transition-duration * 1.5 ease-out
+        &__btn
+            display: block
+            background: none
+            width: 25px
+            height: 21px
+            .icon
+                fill: $c-text
+                width: 100%
+                height: 100%
+        &__close
+            position: absolute
+            right: 21px
+            top: 23px
+            background: none
+            width: 20px
+            height: 20px
+            .icon
+                width: 100%
+                height: 100%
+                stroke: $c-text
+        &__header
+            padding: 18px 15px
+            border-bottom: 1px solid $c-border
+            .logo
+                width: 143px
+                height: 25px
+        &__link
+            display: block
+            padding: 22px 14px
+            border-bottom: 1px solid $c-border
+            +text($c-text, $fs-text, 500, 1)
+            transition: all 0.01s linear
+            &:active
+                color: $c-white
+                background-color: $c-primary
+                transition: all 0.01s linear
+        &__contacts
+            padding: 0 9px
+            margin-top: 28px
+        &__phone
+            .phone__title
+                +text($c-text, $fs-text, 400, 1.17)
+                margin-bottom: 7px
+            .phone__number
+                +text($c-text, $fs-text-large, 700, 1.44)
+        &__location
+            margin-top: 11px
+            .location__icon
+                width: 12px
+                height: 15px
+            .location__city
+                +text($c-text, $fs-text, 400, 1)
+                text-decoration: underline dotted
+
+    .mobile-menu._active
+        right: 0
+        transition: all $transition-duration * 1.5 ease-out

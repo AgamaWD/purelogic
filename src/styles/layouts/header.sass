@@ -1,0 +1,121 @@
+.header
+    display: flex
+    width: 100%
+    &__left
+        flex-basis: 50%
+        flex-shrink: 0
+        flex-grow: 0
+        .logo
+            display: none
+    &__right
+        flex-basis: 50%
+        flex-shrink: 0
+        flex-grow: 0
+        display: flex
+        align-items: stretch
+        justify-content: flex-end
+        background-color: $c-primary
+    &__form
+        width: 100%
+        background-color: $c-bg
+        padding-top: 8px
+        padding-bottom: 8px
+        .form__input
+            max-width: 555px
+    &__personblock
+        flex-basis: auto
+        flex-shrink: 0
+        flex-grow: 1
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25)
+    &__contacts
+        flex-basis: 188px
+        flex-shrink: 0
+        flex-grow: 0
+        border-left: 1px solid rgba(255, 255, 255, 0.25)
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25)
+        padding: 20px 25px 17px
+        text-align: center
+        .location__city
+            text-decoration: underline dotted
+    &__phone
+        color: $c-white
+        .phone__title
+            font-size: $fs-text-small
+            font-weight: 400
+            line-height: 1.17
+        .phone__number
+            font-size: $fs-text-large
+            font-weight: 700
+            line-height: 1.44
+    &__consultation
+        flex-basis: 224px
+        flex-shrink: 0
+        flex-grow: 0
+        height: 100%
+        background-color: $c-text
+        +text($c-white, $fs-text-large, 500, 1.2)
+        padding-left: 53px
+        text-align: left
+        &._mobile
+            display: none
+
+@media screen and ( max-width: $screen-lg-max )
+    .header
+        &__left
+            flex-basis: 57%
+        &__right
+            flex-basis: 43%
+        &__form
+            .form__input
+                max-width: 379px
+        &__personblock
+            flex-wrap: wrap
+            flex-shrink: 1
+        &__contacts
+            flex-basis: 162px
+            padding: 20px 19px
+        &__phone
+            .phone__number
+                font-size: $fs-base
+        &__consultation
+            flex-basis: 147px
+            +text($c-white, $fs-text, 500, 1.2)
+            padding-left: 20px
+
+@media screen and ( max-width: $screen-xs-max )
+    .header
+        display: block
+        &__left
+            display: flex
+            justify-content: space-between
+            padding: 18px 10px
+            flex-basis: auto
+            border-bottom: 2px solid $c-primary
+            .logo
+                display: block
+                width: 143px
+                height: 25px
+        &__menu, &__form
+            display: none
+        &__right
+            align-items: center
+            flex-basis: auto
+            padding: 6px 10px
+            background: none
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1)
+        &__personblock
+            flex-wrap: wrap
+            flex-shrink: 1
+        &__contacts
+            display: none
+        &__consultation
+            display: none
+            &._mobile
+                display: block
+                +text($c-white, $fs-text, 700, 1.7)
+                padding: 9px 22px
+                text-align: center
+                flex-basis: auto
+
+
+        

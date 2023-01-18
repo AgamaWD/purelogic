@@ -1,0 +1,36 @@
+{
+  "name": "processing_24",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "watch": "cross-env NODE_ENV=development webpack-dev-server --mode development --open",
+    "dev": "cross-env NODE_ENV=development webpack --mode development",
+    "prod": "cross-env NODE_ENV=production webpack  --mode production"
+  },
+  "browserslist": "> 0.25%, not dead",
+  "keywords": [],
+  "author": "Alexander Whitech",
+  "license": "ISC",
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "css-minimizer-webpack-plugin": "^4.2.2",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "sass": "^1.56.0",
+    "sass-loader": "^13.1.0",
+    "terser-webpack-plugin": "^5.3.6",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1",
+    "css-loader": "^6.7.1",
+    "raw-loader": "^4.0.2"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.19.4",
+    "babel-loader": "^9.1.0",
+    "swiper": "^8.4.4",
+    "vanilla-lazyload": "^17.8.3"
+  }
+}

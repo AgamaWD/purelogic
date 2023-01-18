@@ -1,0 +1,74 @@
+.advantages-card
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    padding: 42px
+    background-position: center
+    background-size: cover
+    &::before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 0%)
+        z-index: 1
+    &__title
+        display: flex
+        align-items: center
+        z-index: 10
+        +text($c-white, $fs-subtitle-small, 700, 1.25)
+    &__icon
+        fill: $c-white
+        stroke: $c-white
+        width: 70px
+        height: 60px
+        margin-right: 32px
+        margin-bottom: 17px
+    &__info
+        position: absolute
+        background-color: $c-primary
+        padding: 23px 11px 19px 23px
+        left: 0
+        bottom: 0
+        width: 100%
+        height: 0
+        opacity: 0
+        transition: all $transition-duration linear
+        +text($c-white, $fs-text, 400, 1.35)
+        z-index: 20
+
+.advantages-card:hover
+    .advantages-card__info
+        height: 100%
+        opacity: 1
+        transition: all $transition-duration linear
+
+
+@media screen and ( max-width: $screen-lg-max )
+    .advantages-card
+        padding: 28px 17px
+        &__title
+            font-size: $fs-subtitle-x-small
+        &__icon
+            width: 55px
+            height: 45px
+            margin-right: 11px
+            margin-bottom: 17px
+
+@media screen and ( max-width: $screen-xs-max )
+    .advantages-card
+        padding: 15px 8px
+        &__title
+            display: block
+            font-size: $fs-base
+        &__icon
+            width: 19px
+            height: 16px
+            margin-right: 0
+            margin-bottom: 6px
+        &__info
+            padding: 5px 10px
+            font-size: 8px

@@ -1,0 +1,16 @@
+.nav-menu
+    display: flex
+    padding: 19px 50px 14px
+    justify-content: center
+    align-items: center
+    column-gap: 47px
+    &__link
+        +text($c-text, $fs-text, 400, 1.17)
+.nav-menu._mobile
+    display: block
+    padding: 0
+
+@media screen and ( max-width: $screen-lg-max )
+    .nav-menu
+        padding: 15px 28px
+        column-gap: 19px

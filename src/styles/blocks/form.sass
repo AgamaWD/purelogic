@@ -1,0 +1,21 @@
+.form
+    display: flex
+    align-items: stretch
+    justify-content: center
+    &__input
+        display: block
+        padding: 11px 15px
+        width: 100%
+        +text($c-text, $fs-text, 400, 1.17)
+    &__btn
+        width: 120px
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: $c-text
+        +text($c-white, $fs-text, 400, 1.17)
+    &__icon
+        width: 14px
+        height: 14px
+        fill: $c-white
+        margin-right: 8px

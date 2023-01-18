@@ -1,0 +1,36 @@
+.client
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    align-items: center
+    padding-bottom: 45px
+    border: 1px solid $c-border
+    transition: all $transition-duration linear
+    &__title
+        margin-top: 30px
+        +text($c-text, $fs-base, 700, 1.875)
+
+.client:hover
+    box-shadow: 0px 0px 55px rgba(0, 0, 0, 0.1)
+    transition: all $transition-duration linear
+
+@media screen and ( max-width: $screen-lg-max )
+    .client
+        padding-bottom: 28px
+        &__title
+            margin-top: 22px
+            font-size: $fs-text
+        &__img
+            max-width: 205px
+            max-height: 100px 
+
+@media screen and ( max-width: $screen-xs-max )
+    .client
+        padding-bottom: 16px
+        &__title
+            margin-top: 15px
+            text-align: center
+            line-height: 1.14
+        &__img
+            max-width: 96px
+            max-height: 45px 

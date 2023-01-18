@@ -1,0 +1,39 @@
+.side-menu
+    border-bottom: 2px solid #ECECEC
+    &__item
+        display: flex
+        align-items: center
+        padding: 16px 20px
+        border-top: 2px solid #ECECEC
+        background-color: $c-bg
+        transition: all $transition-duration linear
+    &__icon
+        width: 39px
+        height: 36px
+        margin-right: 20px
+        fill: $c-text
+        stroke: $c-text
+        transition: all $transition-duration linear
+    &__text
+        +text($c-text, $fs-base, 500, 0.8125)
+        transition: all $transition-duration linear
+    &__item:hover
+        transition: all $transition-duration linear
+        background-color: $c-white
+        .side-menu__icon
+            transition: all $transition-duration linear
+            fill: $c-primary
+            stroke: $c-primary
+            &._nostroke
+                stroke: none
+        .side-menu__text
+            transition: all $transition-duration linear
+            color: $c-primary
+
+@media screen and ( max-width: $screen-lg-max )
+    .side-menu
+        &__icon
+            width: 32px
+            height: 29px
+        &__text
+            font-size: $fs-text

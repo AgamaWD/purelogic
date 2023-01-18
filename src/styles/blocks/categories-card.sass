@@ -1,0 +1,220 @@
+.categories-card
+    position: relative
+    background-repeat: no-repeat
+    background-size: cover
+    display: flex
+    flex-direction: column
+    &__img
+        max-width: 100%
+        object-fit: contain
+        z-index: 1
+    &__title
+        +text($c-text, $fs-subtitle, 500, 1.2)
+        max-width: 290px
+        z-index: 10
+        &._white
+            color: $c-white
+    &__decor
+        position: absolute
+        z-index: 10
+        .icon
+            width: 72px
+            height: 72px
+    &._1
+        padding: 22px 17px 42px
+        justify-content: space-between
+    &._2
+        padding: 42px 48px
+        justify-content: flex-end
+        align-items: flex-start
+        .categories-card__img
+            position: absolute
+            left: 50%
+            top: 20px
+            transform: translateX(-50%)
+            width: 490px
+        .categories-card__title
+            width: 200px
+    &._3
+        padding: 33px 70px 42px
+        justify-content: space-between
+        .categories-card__img
+            width: 241px
+            align-self: center
+        .categories-card__decor._left
+            left: 7.9%
+            top: 25.8%
+            fill: $c-primary
+        .categories-card__decor._right
+            top: -2.6%
+            right: 16.55%
+            transform: rotate(180deg)
+            fill: $c-primary
+    &._4
+        padding: 42px 48px
+        justify-content: flex-end
+        .categories-card__img
+            width: 348px
+            align-self: center
+            margin-bottom: 32px
+        .categories-card__title
+            width: 200px
+    &._5
+        padding: 10px 50px 42px
+        justify-content: space-between
+        .categories-card__decor._left
+            left: 0.88%
+            top: 4.87%
+            transform: rotate(90deg)
+            fill: $c-primary
+        .categories-card__decor._right
+            top: -3.7%
+            right: 11.7%
+            transform: rotate(180deg)
+            fill: $c-text
+    &._6
+        padding: 15px 48px
+        flex-direction: row-reverse
+        justify-content: flex-end
+        align-items: flex-end
+        .categories-card__img
+            width: 524px
+        .categories-card__title
+            width: 137px
+            margin-bottom: 30px
+        .categories-card__decor
+            left: 1.7%
+            top: 6.6%
+            transform: rotate(90deg)
+            fill: $c-text
+    &._7
+        padding: 42px 48px
+        justify-content: flex-end
+        .categories-card__decor
+            left: 0.6%
+            top: 4.3%
+            transform: rotate(90deg)
+            fill: $c-primary
+
+@media screen and ( max-width: $screen-lg-max )
+
+    .categories-card
+        &__title
+            font-size: $fs-subtitle-x-small
+            max-width: 200px
+        &__decor
+            .icon
+                width: 46px
+                height: 46px
+        &._1
+            padding: 15px 11px 31px
+            .categories-card__title
+                max-width: 210px
+                margin: 0 auto
+        &._2
+            padding: 24px 30px
+            .categories-card__img
+                top: 25px
+                width: 290px
+            .categories-card__title
+                width: 180px
+        &._3
+            padding: 22px 26px
+            .categories-card__img
+                width: 150px
+        &._4
+            padding: 39px 25px
+            .categories-card__img
+                margin-bottom: 20px
+            .categories-card__title
+                width: 170px
+        &._5
+            padding: 0px 23px 25px
+            .categories-card__img
+                max-width: 350px
+        &._6
+            padding: 24px 31px
+            .categories-card__img
+                width: 320px
+            .categories-card__title
+                width: 95px
+                margin-bottom: 0
+        &._7
+            padding: 27px 21px
+
+@media screen and ( max-width: $screen-xs-max )
+    .categories-card
+        position: relative
+        background-repeat: no-repeat
+        background-size: cover
+        display: flex
+        flex-direction: column
+        &__img
+            max-width: 100%
+            object-fit: contain
+            z-index: 1
+        &__title
+            font-size: $fs-text-x-small
+            max-width: 125px
+            z-index: 10
+        &__decor
+            .icon
+                width: 24px
+                height: 24px
+        &._1
+            padding: 5px 10px
+            .categories-card__img
+                width: 105px
+                margin: 0 auto
+            .categories-card__title
+                width: 100%
+        &._2
+            padding: 5px 10px
+            .categories-card__img
+                width: 115px
+                top: 10px
+            .categories-card__title
+                width: 90px
+                font-size: 10px
+        &._3
+            padding: 5px 10px
+            justify-content: flex-end
+            .categories-card__title
+                width: 90px
+                font-size: 11px
+            .categories-card__img
+                position: absolute
+                left: 50%
+                top: 10px
+                transform: translateX(-50%)
+                width: 65px
+        &._4
+            padding: 5px 10px
+            .categories-card__img
+                width: 90px
+                margin-bottom: 10px
+            .categories-card__title
+                width: 100px
+                font-size: $fs-text-small
+        &._5
+            padding: 5px 10px
+            .categories-card__img
+                max-width: 110px
+            .categories-card__title
+                font-size: 10px
+            .categories-card__decor._left
+                left: 0%
+        &._6
+            padding: 5px 10px
+            flex-direction: row-reverse
+            justify-content: flex-end
+            align-items: flex-end
+            .categories-card__img
+                width: 90px
+            .categories-card__title
+               font-size: 10px
+        &._7
+            padding: 5px 10px
+            .categories-card__title
+                font-size: 10px
+                max-width: 90px

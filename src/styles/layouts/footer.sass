@@ -1,0 +1,207 @@
+.footer
+    padding-top: 74px
+    padding-bottom: 39px
+    &__top
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+    &__column
+        width: fit-content
+        flex-shrink: 0
+    &__logo
+        width: 250px
+        height: 46px
+    &__copyright
+        +text($c-text, $fs-text, 400, 1.7)
+        margin-top: 35px
+    &__phone
+        margin-top: 40px
+        .phone__title
+            font-size: $fs-text-small
+            font-weight: 400
+            line-height: 1.17
+        .phone__phone
+            margin-top: 11px
+        .phone__number
+            margin-right: 26px
+            font-size: $fs-text-large
+            font-weight: 700
+            line-height: 1.44
+    &__social
+        display: flex
+        flex-direction: column
+        row-gap: 48px
+        .social__icon
+            width: 25px
+            height: 19px
+            fill: $c-primary
+    &__location
+        .location
+            &__city
+                +text($c-text, $fs-base, 400, 1.625)
+            &__icon
+                width: 29px
+                height: 41px
+                margin-right: 10px
+        & + .footer__location
+            margin-top: 29px
+    &__title
+        +text($c-text, $fs-subtitle-small, 500, 1.5)
+        margin-bottom: 30px
+    &__link
+        display: block
+        +text($c-text, $fs-base, 400, 1.5)
+        & + .footer__link
+            margin-top: 12px
+
+    &__subscription
+        margin-top: 56px
+        margin-bottom: 61px
+    
+    &__line
+        height: 1px
+        width: 100%
+        background-color: rgba(0, 0, 0, 0.05)
+    
+    &__bottom
+        margin-top: 52px
+
+    &__docs
+        display: flex
+        align-items: center
+        column-gap: 30px
+        .docs__text
+            +text($c-text, $fs-text, 400, 1.7)
+        .docs__icons
+            display: flex
+            align-items: center
+            column-gap: 30px
+        .docs__icon
+            max-height: 65px
+            max-width: 65px 
+       
+    &__disclaimer
+        margin-top: 28px
+        +text($c-text-gray, $fs-text, 400, 1.7)
+
+@media screen and ( max-width: $screen-lg-max )
+    .footer
+        padding-top: 29px
+        &__logo
+            width: 162px
+            height: 30px
+        &__copyright
+            margin-top: 23px
+        &__phone
+            margin-top: 37px
+            .phone__title
+                font-size: $fs-text
+            .phone__number
+                margin-right: 18px
+            .phone__phone
+                margin-top: 13px
+        &__social
+            row-gap: 37px
+            .social__icon
+                width: 20px
+                height: 15px
+        &__location
+            .location
+                &__title
+                    font-size: $fs-base
+                &__icon
+                    width: 15px
+                    height: 21px
+                    margin-right: 12px
+            & + .footer__location
+                margin-top: 15px
+        &__title
+            font-size: $fs-subtitle-x-small
+            margin-bottom: 10px
+        &__link
+            font-size: $fs-text
+            & + .footer__link
+                margin-top: 8px
+        &__subscription
+            margin-top: 49px
+            margin-bottom: 36px
+        
+        &__bottom
+            margin-top: 30px
+
+        &__docs
+            flex-wrap: wrap
+            column-gap: 50px
+            row-gap: 13px
+            .docs__icons
+                column-gap: 20px
+            .docs__icon
+                max-height: 42px
+                max-width: 42px 
+        
+        &__disclaimer
+            margin-top: 23px
+
+@media screen and ( max-width: $screen-xs-max )
+        .footer
+            padding-top: 36px
+            &__top
+                display: block
+            &__logo
+                width: 201px
+                height: 37px
+            &__copyright
+                margin-top: 14px
+            &__phone
+                margin-top: 22px
+                .phone__phone
+                    margin-top: 8px
+            &__social
+                flex-direction: row
+                row-gap: 25px
+                margin-top: 24px
+                margin-bottom: 46px
+            &__about, &__buyer
+                display: none
+            &__offices
+                width: 100%
+                padding-top: 20px
+                border-top: 1px solid $c-border
+            &__location
+                .location
+                    &__title
+                        font-size: $fs-text
+                    &__city
+                        font-size: $fs-text
+                    &__icon
+                        width: 24px
+                        height: 33px
+                        margin-right: 15px
+                & + .footer__location
+                    margin-top: 20px
+            &__title
+                font-size: $fs-base
+                margin-bottom: 42px
+            &__subscription
+                margin-top: 30px
+                margin-bottom: 0px
+            
+            &__bottom
+                margin-top: 0px
+
+            &__docs
+                display: block
+                .docs__text
+                    display: block
+                    padding: 20px 0
+                    border-top: 1px solid $c-border
+                .docs__icons
+                    column-gap: 30px
+                .docs__icon
+                    max-height: 62px
+                    max-width: 62px 
+            
+            &__disclaimer
+                font-size: 10px
+                margin-top: 26px
+            

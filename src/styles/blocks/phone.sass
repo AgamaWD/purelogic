@@ -1,0 +1,22 @@
+.phone
+    color: $c-text
+    text-align: left
+    width: fit-content
+    &__phone
+        display: flex
+        align-items: center
+    &__icon
+        fill: $c-primary
+        stroke: $c-primary
+        width: 23px
+        height: 23px
+        & + .phone__icon
+            margin-left: 20px
+@media screen and ( max-width: $screen-xs-max )
+    .phone
+        &__icon
+            width: 16px
+            height: 16px
+            & + .phone__icon
+                margin-left: 14px
+    

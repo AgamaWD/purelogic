@@ -1,0 +1,25 @@
+.slider-pagination
+    display: flex
+    column-gap: 26px
+    position: absolute
+    bottom: 0
+    left: 0
+    .swiper-pagination-bullet
+        display: block 
+        width: 10px
+        height: 10px
+        border: 1px solid $c-text
+        border-radius: 100%
+    .swiper-pagination-bullet-active
+        border: none
+        background-color: $c-primary
+
+@media screen and ( max-width: $screen-xs-max )
+    .slider-pagination
+        column-gap: 16px
+        left: 50%
+        transform: translateX(-50%)
+        .swiper-pagination-bullet
+            display: block 
+            width: 6px
+            height: 6px
